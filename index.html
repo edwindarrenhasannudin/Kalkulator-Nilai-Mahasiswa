@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Deklarasi tipe dokumen HTML -->
+  <meta charset="UTF-8">
+  <!-- Pengaturan karakter encoding menjadi UTF-8 untuk mendukung berbagai karakter -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Mengatur tampilan responsif berdasarkan lebar perangkat -->
+  <title>Kalkulator Nilai Mahasiswa</title>
+  <!-- Menentukan judul halaman yang akan tampil di tab browser -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Menghubungkan file CSS eksternal untuk mendesain halaman -->
+</head>
+<body>
+  <!-- Awal konten utama halaman -->
+  <div class="container">
+    <!-- Kontainer utama untuk elemen di halaman -->
+    <h2>Kalkulator Nilai Mahasiswa</h2>
+    <!-- Judul aplikasi kalkulator -->
+    <form id="formNilai">
+      <!-- Form untuk menginput nilai mahasiswa -->
+      
+      <label for="nilaiTugas">Nilai Tugas (30%):</label>
+      <!-- Label untuk input nilai tugas dengan bobot 30% -->
+      <input type="number" id="nilaiTugas" placeholder="0-100" required>
+      <!-- Input untuk nilai tugas, dengan tipe number dan placeholder untuk rentang nilai -->
+
+      <label for="nilaiUTS">Nilai UTS (30%):</label>
+      <!-- Label untuk input nilai UTS dengan bobot 30% -->
+      <input type="number" id="nilaiUTS" placeholder="0-100" required>
+      <!-- Input untuk nilai UTS, dengan tipe number dan placeholder untuk rentang nilai -->
+
+      <label for="nilaiUAS">Nilai UAS (40%):</label>
+      <!-- Label untuk input nilai UAS dengan bobot 40% -->
+      <input type="number" id="nilaiUAS" placeholder="0-100" required>
+      <!-- Input untuk nilai UAS, dengan tipe number dan placeholder untuk rentang nilai -->
+
+      <div class="button-group">
+        <!-- Grup tombol untuk aksi pengguna -->
+        <button type="button" onclick="hitungNilai()">Hitung Nilai</button>
+        <!-- Tombol untuk memanggil fungsi hitungNilai saat diklik -->
+        <button type="reset">Reset</button>
+        <!-- Tombol untuk mereset semua input di form -->
+      </div>
+    </form>
+    <div id="hasil" class="result"></div>
+    <!-- Div untuk menampilkan hasil perhitungan -->
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Menghubungkan file JavaScript eksternal untuk logika perhitungan -->
+</body>
+</html>

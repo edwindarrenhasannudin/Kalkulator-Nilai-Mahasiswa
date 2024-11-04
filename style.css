@@ -1,0 +1,141 @@
+/* Mengatur styling dasar untuk semua elemen */
+* {
+  margin: 0; /* Menghilangkan margin bawaan */
+  padding: 0; /* Menghilangkan padding bawaan */
+  box-sizing: border-box; /* Mengatur box-sizing agar padding tidak menambah ukuran elemen */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mengatur font utama */
+  background: linear-gradient(120deg, #84fab0, #8fd3f4); /* Latar belakang gradien */
+  display: flex; /* Mengatur layout flexbox */
+  justify-content: center; /* Menyusun konten di tengah secara horizontal */
+  align-items: center; /* Menyusun konten di tengah secara vertikal */
+  height: 100vh; /* Mengatur tinggi viewport penuh */
+}
+
+.container {
+  background: linear-gradient(145deg, #ffffff, #e6e9ef); /* Latar belakang gradien untuk container */
+  padding: 40px; /* Memberikan padding ke konten dalam container */
+  border-radius: 12px; /* Membuat sudut elemen menjadi melingkar */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), inset -4px -4px 10px #ffffff; /* Efek bayangan */
+  max-width: 400px; /* Maksimal lebar container */
+  width: 100%; /* Lebar penuh container */
+  text-align: center; /* Mengatur teks menjadi rata tengah */
+  transition: all 0.3s ease; /* Efek transisi pada hover */
+}
+
+.container:hover {
+  transform: translateY(-5px); /* Menambahkan efek hover dengan sedikit mengangkat container */
+}
+
+h2 {
+  margin-bottom: 20px; /* Jarak bawah heading */
+  color: #2a2a2a; /* Warna teks heading */
+  font-size: 24px; /* Ukuran font heading */
+  font-weight: 700; /* Ketebalan font heading */
+  letter-spacing: 1px; /* Jarak antar huruf */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+}
+
+form label {
+  display: block; /* Menampilkan label sebagai blok */
+  text-align: left; /* Mengatur teks label rata kiri */
+  margin: 15px 0 5px; /* Jarak di sekitar label */
+  color: #555555; /* Warna teks label */
+  font-weight: 500; /* Ketebalan teks label */
+  font-size: 0.9em; /* Ukuran font label */
+}
+
+form input {
+  width: 100%; /* Lebar penuh input */
+  padding: 12px; /* Memberikan padding dalam input */
+  margin-bottom: 20px; /* Jarak bawah input */
+  border: none; /* Menghapus border */
+  border-radius: 8px; /* Membuat sudut input menjadi melingkar */
+  background-color: #f9fafc; /* Warna latar input */
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.05), inset -4px -4px 8px rgba(255, 255, 255, 0.7); /* Efek bayangan */
+  font-size: 1em; /* Ukuran font */
+  color: #333333; /* Warna teks input */
+  transition: all 0.3s ease; /* Transisi perubahan */
+}
+
+form input:focus {
+  background-color: #ffffff; /* Mengubah warna latar saat input fokus */
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.8); /* Efek fokus */
+  outline: none; /* Menghilangkan outline */
+}
+
+.button-group {
+  display: flex; /* Menampilkan tombol sebagai flex */
+  justify-content: space-between; /* Menyebarkan tombol secara merata */
+  gap: 10px; /* Jarak antar tombol */
+  margin-top: 15px; /* Jarak atas */
+}
+
+.button-group button {
+  flex: 1; /* Membuat tombol memiliki ukuran fleksibel */
+  padding: 12px; /* Padding tombol */
+  border: none; /* Menghapus border */
+  border-radius: 8px; /* Sudut tombol melingkar */
+  font-size: 1em; /* Ukuran font */
+  font-weight: 600; /* Ketebalan teks tombol */
+  cursor: pointer; /* Mengubah kursor saat hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi perubahan */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan tombol */
+}
+
+.button-group button[type="button"] {
+  background-color: #2a9d8f; /* Warna tombol "Hitung Nilai" */
+  color: white; /* Warna teks tombol */
+}
+
+.button-group button[type="button"]:hover {
+  background-color: #21867a; /* Warna saat tombol "Hitung Nilai" dihover */
+  transform: scale(1.02); /* Sedikit memperbesar tombol */
+}
+
+.button-group button[type="reset"] {
+  background-color: #d32f2f; /* Warna tombol "Reset" */
+  color: white; /* Warna teks tombol */
+}
+
+.button-group button[type="reset"]:hover {
+  background-color: #c62828; /* Warna saat tombol "Reset" dihover */
+  transform: scale(1.02); /* Sedikit memperbesar tombol */
+}
+
+.result {
+  margin-top: 20px; /* Jarak atas hasil */
+  font-size: 1.1em; /* Ukuran font hasil */
+  color: #333333; /* Warna teks hasil */
+}
+
+.result p {
+  margin: 8px 0; /* Jarak vertikal pada paragraf hasil */
+  font-weight: 500; /* Ketebalan teks paragraf */
+}
+
+.result .status-pass {
+  color: #388e3c; /* Warna teks untuk status lulus */
+  font-weight: bold; /* Ketebalan teks untuk status lulus */
+}
+
+.result .status-fail {
+  color: #d32f2f; /* Warna teks untuk status tidak lulus */
+  font-weight: bold; /* Ketebalan teks untuk status tidak lulus */
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 20px; /* Mengatur ukuran font heading pada layar kecil */
+  }
+
+  .container {
+    padding: 30px; /* Mengurangi padding pada layar kecil */
+  }
+
+  button {
+    font-size: 0.95em; /* Mengatur ukuran font tombol pada layar kecil */
+  }
+}
