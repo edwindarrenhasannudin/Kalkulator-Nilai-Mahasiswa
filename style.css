@@ -12,11 +12,12 @@ body {
   justify-content: center; /* Menyusun konten di tengah secara horizontal */
   align-items: center; /* Menyusun konten di tengah secara vertikal */
   height: 100vh; /* Mengatur tinggi viewport penuh */
+  padding: 10px; /* Tambahkan padding agar tidak terlalu menempel pada tepi layar */
 }
 
 .container {
   background: linear-gradient(145deg, #ffffff, #e6e9ef); /* Latar belakang gradien untuk container */
-  padding: 40px; /* Memberikan padding ke konten dalam container */
+  padding: 30px 20px; /* Mengurangi padding atas dan bawah */
   border-radius: 12px; /* Membuat sudut elemen menjadi melingkar */
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), inset -4px -4px 10px #ffffff; /* Efek bayangan */
   max-width: 400px; /* Maksimal lebar container */
@@ -30,7 +31,7 @@ body {
 }
 
 h2 {
-  margin-bottom: 20px; /* Jarak bawah heading */
+  margin-bottom: 15px; /* Mengurangi jarak bawah heading */
   color: #2a2a2a; /* Warna teks heading */
   font-size: 24px; /* Ukuran font heading */
   font-weight: 700; /* Ketebalan font heading */
@@ -41,7 +42,7 @@ h2 {
 form label {
   display: block; /* Menampilkan label sebagai blok */
   text-align: left; /* Mengatur teks label rata kiri */
-  margin: 15px 0 5px; /* Jarak di sekitar label */
+  margin: 10px 0 5px; /* Mengurangi jarak di sekitar label */
   color: #555555; /* Warna teks label */
   font-weight: 500; /* Ketebalan teks label */
   font-size: 0.9em; /* Ukuran font label */
@@ -49,8 +50,8 @@ form label {
 
 form input {
   width: 100%; /* Lebar penuh input */
-  padding: 12px; /* Memberikan padding dalam input */
-  margin-bottom: 20px; /* Jarak bawah input */
+  padding: 10px 12px; /* Mengurangi padding atas dan bawah */
+  margin-bottom: 15px; /* Mengurangi jarak bawah input */
   border: none; /* Menghapus border */
   border-radius: 8px; /* Membuat sudut input menjadi melingkar */
   background-color: #f9fafc; /* Warna latar input */
@@ -69,13 +70,13 @@ form input:focus {
 .button-group {
   display: flex; /* Menampilkan tombol sebagai flex */
   justify-content: space-between; /* Menyebarkan tombol secara merata */
-  gap: 10px; /* Jarak antar tombol */
-  margin-top: 15px; /* Jarak atas */
+  gap: 8px; /* Mengurangi jarak antar tombol */
+  margin-top: 10px; /* Mengurangi jarak atas */
 }
 
 .button-group button {
   flex: 1; /* Membuat tombol memiliki ukuran fleksibel */
-  padding: 12px; /* Padding tombol */
+  padding: 10px; /* Mengurangi padding tombol */
   border: none; /* Menghapus border */
   border-radius: 8px; /* Sudut tombol melingkar */
   font-size: 1em; /* Ukuran font */
@@ -106,13 +107,13 @@ form input:focus {
 }
 
 .result {
-  margin-top: 20px; /* Jarak atas hasil */
+  margin-top: 15px; /* Mengurangi jarak atas hasil */
   font-size: 1.1em; /* Ukuran font hasil */
   color: #333333; /* Warna teks hasil */
 }
 
 .result p {
-  margin: 8px 0; /* Jarak vertikal pada paragraf hasil */
+  margin: 5px 0; /* Mengurangi jarak vertikal pada paragraf hasil */
   font-weight: 500; /* Ketebalan teks paragraf */
 }
 
@@ -126,16 +127,47 @@ form input:focus {
   font-weight: bold; /* Ketebalan teks untuk status tidak lulus */
 }
 
+/* Media query untuk layar tablet (maksimal 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px; /* Mengurangi padding atas dan bawah pada layar tablet */
+  }
+
+  h2 {
+    font-size: 22px; /* Mengurangi ukuran font heading pada layar tablet */
+  }
+
+  .button-group button {
+    font-size: 0.95em; /* Mengurangi ukuran font tombol pada layar tablet */
+  }
+}
+
+/* Media query untuk layar ponsel (maksimal 500px) */
 @media (max-width: 500px) {
   h2 {
-    font-size: 20px; /* Mengatur ukuran font heading pada layar kecil */
+    font-size: 20px; /* Mengatur ukuran font heading pada layar ponsel */
   }
 
   .container {
-    padding: 30px; /* Mengurangi padding pada layar kecil */
+    padding: 15px 10px; /* Mengurangi padding pada layar ponsel */
   }
 
-  button {
-    font-size: 0.95em; /* Mengatur ukuran font tombol pada layar kecil */
+  form input {
+    padding: 8px 10px; /* Mengurangi padding input pada layar ponsel */
+    font-size: 0.9em; /* Mengurangi ukuran font input */
+  }
+
+  .button-group {
+    flex-direction: column; /* Mengatur tombol dalam satu kolom pada layar ponsel */
+    gap: 5px; /* Mengurangi jarak antar tombol pada layar ponsel */
+  }
+
+  .button-group button {
+    font-size: 0.9em; /* Mengurangi ukuran font tombol pada layar ponsel */
+    padding: 8px; /* Mengurangi padding tombol pada layar ponsel */
+  }
+
+  .result {
+    font-size: 1em; /* Mengurangi ukuran font hasil pada layar ponsel */
   }
 }
